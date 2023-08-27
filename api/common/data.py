@@ -1,4 +1,6 @@
 from typing import TypeVar, Callable
+from uuid import uuid4
+from pydantic import BaseModel
 from pymongo import MongoClient
 from pymongo.database import Database
 from pymongo.collection import Collection
@@ -25,3 +27,6 @@ def collection(name:str, callback:CollectionCallback) -> T:
         database = client["antshive"]
         collection = database[name]
         return callback(collection)
+    
+def create_record(data:BaseModel):
+    return {**dict(data), "code": str(uuid4())}
