@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from common.http import value_or_not_found, not_success
-from common.data import collection, create_record
+from common.http import not_success
+from common.data import collection
 from common.models import UserRecord, UserWithPassword, UserRequest
 from common.cryptography import generate_password_hash_and_salt, generate_token, generate_uuid, hash_raw_password_plus_salt
 from pymongo.collection import Collection
