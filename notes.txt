@@ -2,6 +2,7 @@ requests{
     "code" : "",
     "products": [],
     "creation_date": "",
+    "target": "",
     "deliveries": [],
     "status": 0
 }
@@ -70,7 +71,7 @@ deliveries{
 
 arrivals{
     "code": "",
-    "vehicle": "",
+    "entity": "",
     "location": "",
     "epoch": 0
 }

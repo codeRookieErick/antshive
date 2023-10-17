@@ -15,3 +15,7 @@ export function SetSessionToken(token:Token): Token | null{
     sessionStorage.setItem(tokenKeyName, JSON.stringify(token));
     return GetSessionToken();
 }
+
+export function RemoveSessionToken(){
+    sessionStorage.removeItem(tokenKeyName);
+}
